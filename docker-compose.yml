@@ -6,8 +6,11 @@ services:
       - "3000:3000"
     links:
       - db
+      - redis
   db:    
     image: "mysql:5.7"
     command: --default-authentication-plugin=mysql_native_password
     environment:
       MYSQL_ROOT_PASSWORD: '123123'
+  redis:
+    image: "redis:6.0"

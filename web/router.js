@@ -9,7 +9,6 @@ router.get('/', (ctx, next) => {
 });
 
 router.get('/redis', RedisController.checkConnect);
-
 router.get('/mysql', MysqlController.checkConnect);
 
 module.exports = router
